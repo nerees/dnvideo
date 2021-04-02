@@ -1,7 +1,17 @@
 function ShowVideo(){
     //naikinam info
     var info = document.getElementById('main');
-    info.parentNode.removeChild(info);
+    if (typeof info != 'undefined' && info != null){
+      info.parentNode.removeChild(info);
+    }
+
+    var infocode = document.getElementById('codeinput');
+    infocode.parentNode.removeChild(infocode);
+    
+    var infomob = document.getElementById('mainmob');
+    if (typeof infomob != 'undefined' && infomob != null){
+      infomob.parentNode.removeChild(infomob);
+    }
     //kuriam video
     // https://dziugasdegustacijos.lt/degustacija.mp4
     const div = document.createElement('div');
@@ -39,7 +49,7 @@ form.addEventListener('submit', (event) => {
       })
       .then(response => response.json())
       .then(res => {
-        console.log('Success:', res);
+        //console.log('Success:', res);
         if (res===1){
             ShowVideo();
         }else{

@@ -27,7 +27,7 @@
   <div class="main-logo">
     <img src="img/dziugas_logo.png">
   </div>
-
+  <!--desktop-->
   <section id="main" class="content">
     <div class="info">
       <p><h1>SVEIKI ATVYKĘ Į UNIKALŲ RENGINĮ</h1></p>
@@ -36,14 +36,30 @@
     <div class="subinfo">
       <p>Suveskite Virtualios Degustacijos dalyvio kodą </p>
     </div>
-    <div class="code-input">
-      <form id="form" name="form" method="POST" action="/">
-        <input type="text" id="inp" name="code" placeholder="SUVESKITE DALYVIO KODĄ" required>
-        <div id="error" class="hidden"><p style="color:red;">Neteisingas kodas...</p></div>
-        <p><button type="submit" class="button">PATVIRTINTI</button></p>
-      </form>
+   
+  </section>
+  <!--end desktop-->
+  <!--mobile-->
+
+  <section id="mainmob" class="content-mob">
+    <div class="info">
+      <p><h1>SVEIKI ATVYKĘ Į <br> UNIKALŲ RENGINĮ</h1></p>
+      <p><h1>VIRTUALIĄ GURMANIŠKĄ <br><div class="simple-relative">SŪRIO DŽIUGAS<span class="registered">&reg;</span>&nbsp; &nbsp;KELIONĘ</h1></p></div>
+    </div>
+    <div class="subinfo">
+      <p>Suveskite Virtualios Degustacijos dalyvio kodą </p>
     </div>
   </section>
+
+  <!--end mobile-->
+
+  <div id="codeinput" class="code-input">
+    <form id="form" name="form" method="POST" action="/">
+      <input type="text" id="inp" name="code" placeholder="SUVESKITE DALYVIO KODĄ" required>
+      <div id="error" class="hidden"><p style="color:red;">Neteisingas kodas...</p></div>
+      <p><button type="submit" class="button">PATVIRTINTI</button></p>
+    </form>
+  </div>
 
   <section id="video">
     
@@ -53,12 +69,16 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FNBTRWRF18"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FNBTRWRF18');
+</script>
+
 </body>
 
 </html>
