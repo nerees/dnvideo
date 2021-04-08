@@ -85,12 +85,12 @@ html {
  */
 
 ::-moz-selection {
-  background: #ece4e4;
+  background: #873b2f;
   text-shadow: none;
 }
 
 ::selection {
-  background: #ece4e4;
+  background: #873b2f;
   text-shadow: none;
 }
 
@@ -322,6 +322,21 @@ textarea {
   }
 }
 /*NN*/
+
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(241, 228, 191);
+  outline: 1px solid slategrey;
+}
+
 .main-logo{
   margin-top: 30px;
   margin-left: auto;
@@ -333,7 +348,7 @@ textarea {
 }
 .content{
   text-align: center;
-  margin-top:10%;
+  margin-top:5%;
 }
 
 .content-mob{
@@ -422,7 +437,7 @@ input[type=text]:focus {
 
 .button {
   background-color: rgb(241, 228, 191); /* Green */
-  border: none;
+  border: 1px solid rgb(241, 228, 191);
   color: #600019;
   padding: 15px 32px;
   text-align: center;
@@ -475,3 +490,181 @@ input[type=text]:focus {
   }
 
 }
+
+.footer{
+	position:relative;
+	width: 100%;
+	height: 50px;
+	border-top: 1px solid rgba(241, 228, 191, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#gallery{
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:60px;
+}
+
+/* ==========================================================================
+   Galerija : 
+   ========================================================================== */
+   
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+label[for] { cursor: pointer; }
+
+input[type="checkbox"] { display: none; }
+
+
+.lightbox {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  z-index: 1;
+  overflow: auto;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform .75s ease-out;
+  transition: transform .75s ease-out;
+}
+
+.lightbox img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 96%;
+  max-height: 96%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+input[type="checkbox"]:checked + .lightbox {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+input[type="checkbox"]:checked ~ .grid { opacity: .125; }
+
+.grid {
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  background-color: #600019;
+  z-index: 0;
+  /*display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;*/
+  /*padding: 16px;*/
+  overflow: auto;
+  text-align: center;
+  -webkit-transition: opacity .75s;
+  transition: opacity .75s;
+}
+.grid2 {
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  background-color: #600019;
+  z-index: 0;
+  /*display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;*/
+  /*padding: 16px;*/
+  overflow: auto;
+  text-align: center;
+  -webkit-transition: opacity .75s;
+  transition: opacity .75s;
+}
+
+.grid .grid-item {
+  
+  display: inline-block;
+  padding: 5px;
+  opacity: .75;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+.grid2 .grid-item {
+  
+  display: inline-block;
+  padding: 5px;
+  opacity: .75;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.grid .grid-item .1{
+  width: 50%;
+  
+}
+.grid2 .grid-item .2{
+  width: 25%;
+  
+}
+.grid2 .grid-item .3{
+  width: 50%;		
+  
+}
+
+.grid .grid-item:hover { opacity: 1; }
+.grid2 .grid-item:hover { opacity: 1; }
+@media screen and (max-width: 1024px) {
+
+.grid .grid-item { width: 50%; }
+.grid2 .grid-item { width: 50%; }
+}
+@media screen and (max-width: 480px) {
+
+.grid .grid-item { width: 100%; }
+.grid2 .grid-item { width: 100%; }
+}
+
+.grid img {
+  max-width: 100%;
+  max-height: 428px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.grid2 img {
+  max-width: 100%;
+  max-height: 450px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+/* ==========================================================================
+   END Galerija : 
+   ========================================================================== */

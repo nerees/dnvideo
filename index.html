@@ -11,6 +11,7 @@
   <meta property="og:type" content="">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
+  <meta name="theme-color" content="#600019">
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
@@ -65,6 +66,73 @@
     
   </section>
   
+  <section id="gallery">
+		<input type="checkbox" id="pic-1"/>
+		<label for="pic-1" class="lightbox"><img src="img/1.jpg"/></label>
+		<input type="checkbox" id="pic-2"/>
+		<label for="pic-2" class="lightbox"><img src="img/2.jpg"/></label>
+		<input type="checkbox" id="pic-3"/>
+		<label for="pic-3" class="lightbox"><img src="img/3.jpg"/></label>
+		<input type="checkbox" id="pic-4"/>
+		<label for="pic-4" class="lightbox"><img src="img/4.jpg"/></label>
+		<input type="checkbox" id="pic-5"/>
+		<label for="pic-5" class="lightbox"><img src="img/5.jpg"/></label>
+		<input type="checkbox" id="pic-6"/>
+		<label for="pic-6" class="lightbox"><img src="img/6.jpg"/></label>
+		<input type="checkbox" id="pic-7"/>
+		<label for="pic-7" class="lightbox"><img src="img/7.jpg"/></label>
+		<input type="checkbox" id="pic-8"/>
+		<label for="pic-8" class="lightbox"><img src="img/8.jpg"/></label>
+		<input type="checkbox" id="pic-9"/>
+		<label for="pic-9" class="lightbox"><img src="img/9.jpg"/></label>
+		<input type="checkbox" id="pic-10"/>
+		<label for="pic-10" class="lightbox"><img src="img/10.jpg"/></label>
+		<input type="checkbox" id="pic-11"/>
+		<label for="pic-11" class="lightbox"><img src="img/11.jpg"/></label>
+		<input type="checkbox" id="pic-12"/>
+		<label for="pic-12" class="lightbox"><img src="img/12.jpg"/></label>
+		<input type="checkbox" id="pic-13"/>
+		<label for="pic-13" class="lightbox"><img src="img/13.jpg"/></label>
+		<input type="checkbox" id="pic-14"/>
+		<label for="pic-14" class="lightbox"><img src="img/14.jpg"/></label>
+		<div class="grid">
+			<label for="pic-1" class="grid-item 1"><img src="img/1.jpg"/></label>
+			<label for="pic-2" class="grid-item 1"><img src="img/2.jpg"/></label>
+			
+		</div>
+		<div class="grid2">
+			  <label for="pic-3" class="grid-item 2"><img src="img/3.jpg"/></label>
+			  <label for="pic-4" class="grid-item 3"><img src="img/4.jpg"/></label>
+			  <label for="pic-5" class="grid-item 2"><img src="img/5.jpg"/></label>
+		</div>
+		<div class="grid2">
+			  <label for="pic-6" class="grid-item 2"><img src="img/6.jpg"/></label>
+			  <label for="pic-7" class="grid-item 3"><img src="img/7.jpg"/></label>
+			  <label for="pic-8" class="grid-item 2"><img src="img/8.jpg"/></label>
+		</div>	  
+		<div class="grid2">
+			  <label for="pic-9" class="grid-item 2"><img src="img/9.jpg"/></label>
+			  <label for="pic-10" class="grid-item 3"><img src="img/10.jpg"/></label>
+			  <label for="pic-11" class="grid-item 2"><img src="img/11.jpg"/></label>
+		</div>	  
+		<div class="grid2">
+			  <label for="pic-12" class="grid-item 2"><img src="img/12.jpg"/></label>
+			  <label for="pic-13" class="grid-item 3"><img src="img/13.jpg"/></label>
+			  <label for="pic-14" class="grid-item 2"><img src="img/14.jpg"/></label>
+		</div>
+  
+  </section>
+  
+  <section id="footer">
+	<div class="footer">
+		<div class="footer-inner">
+			&copy; <span id="year"></span> Visos teisės saugomos.
+		</div>
+	</div>
+  </section>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
